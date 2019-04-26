@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Profile</title>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+</head>
+
+<style>
+    /* Clicking the label does not activate the input without this */
+    input[type="text"]+label {
+        pointer-events: none;
+
+        * {
+            pointer-events: all;
+        }
+    }
+
+    input[type="email"]+label {
+        pointer-events: none;
+
+        * {
+            pointer-events: all;
+        }
+    }
+
+
+    input[type="tel"]+label {
+        pointer-events: none;
+
+        * {
+            pointer-events: all;
+        }
+    }
+
+    input[type="number"]+label {
+        pointer-events: none;
+
+        * {
+            pointer-events: all;
+        }
+    }
+
+    input[type="password"]+label {
+        pointer-events: none;
+
+        * {
+            pointer-events: all;
+        }
+    }
+
+
+    header,
+    main,
+    footer {
+        padding-left: 300px;
+    }
+
+    @media only screen and (max-width : 992px) {
+
+        header,
+        main,
+        footer {
+            padding-left: 0;
+        }
+    }
+    
+    
+    .tabs .indicator {
+
+  background-color: purple;
+
+}
+
+/*To change the active state color use the following code in .css file:*/
+
+.tabs .tab a.active {
+
+  background-color: white !important;
+
+  color: purple !important;
+
+}
+
+/*To change the background color on hover use the following code in .css file:*/
+
+.tabs .tab a:hover {
+
+  background-color: #eee;
+
+}
+
+/*To change the link color use the following code in .css file:*/
+
+.tab a {
+
+  font-weight: 600;
+
+  color: rgb(105, 105, 105) !important;
+
+}
+    
+    
+    
+    
+    
+    
+    
+</style>
+
+<body style="">
+    <div class="navbar-fixed">
+    <nav style="background-color: #673ab7;"> <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a> 
+        <div class="nav-wrapper" style="text-align: center;">
+        <img src="icons/aero.png" style="width: 109px;margin-top: 16px;">
+<!--        <h5>AERO</h5>-->
+        </div>
+        
+        </nav>
+        </div>
+    <br>
+
+    <ul id="slide-out" class="sidenav sidenav-fixed" >
+          <li>
+            <div class="user-view">
+                <div class="background">
+                    <img src="download3.jpg">
+                </div>
+                <a href="#user"><img class="circle" src="download1.jpg"></a>
+                <a href="#name"><span class="white-text name">Admin</span></a>
+                <a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a>
+            </div>
+        </li>
+        <li><a href="#!"><i class="material-icons">edit</i>Edit Profile</a></li>
+       
+        <li>
+            <div class="divider"></div>
+        </li>
+        
+        <li><a class="waves-effect" href="#!"><i class="material-icons">input</i>Logout</a></li>
+    </ul>
+    <!--    <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>-->
+
+
+    <div class="" style="margin: 20px;">
+        <main>
+
+            <ul id="tabs-swipe-demo" class="tabs tabs-fixed-width tab-demo z-depth-1" style="box-shadow: 10px 10px 118px -19px rgba(0, 0, 0, 0.81);" data-aos="fade-down" data-aos-duration="1000">
+                <li class="tab col s3"><a class="active" href="#test-swipe-1" style="font-weight: 600;color: dimgrey">PLANE</a></li>
+                <li class="tab col s3"><a href="#test-swipe-2" style="font-weight: 600;color: dimgrey">PILOT</a></li>
+                <li class="tab col s3"><a href="#test-swipe-3" style="font-weight: 600;color: dimgrey">HANGER</a></li>
+            </ul>
+            <!--   ////////////////////////              //////////////////////                   /////////////               Tabs content                  //////////////////////////////////////////         -->
+            <br>
+            <div id="test-swipe-1" class="col s12">
+                <div class="row">
+                    <div class="input-field col s4 m4" data-aos="fade-right" data-aos-duration="1000">
+                        <select class="icons">
+                            <option value="" disabled selected>Choose your option</option>
+                            <option value="" data-icon="download1.jpg">example 1</option>
+                            <option value="" data-icon="download2.jpg">example 2</option>
+                            <option value="" data-icon="download3.jpg">example 3</option>
+                        </select>
+                        <label>SORTY BY</label>
+                    </div>
+                    <div class="input-field col s4 m4" data-aos="fade-left" data-aos-duration="1000">
+
+                        <i class="material-icons prefix">search</i>
+                        <input id="icon_prefix" type="text">
+                        <label for="icon_prefix">Search</label>
+
+
+
+                    </div>
+
+                    <div class="col s4 m4" style="text-align: center;margin-top: 23px;">
+                        <button class="btn waves-effect waves-light z-depth-5" type="submit" name="action" style="border-radius: 23px;   background-color: #311b92" data-aos="slide-up" data-aos-duration="1000">ADD PLANE
+                            <i class="material-icons right">send</i>
+                        </button>
+                        <!--                            &nbsp;&nbsp;<a href="#" class="btn" style="border-radius: 23px;    background: linear-gradient(to right, rgb(21, 153, 87), rgb(21, 87, 153));" >Cancel</a>-->
+
+                    </div>
+
+                </div>
+
+
+                <div class="row">
+                    <div class="col s12 m12 z-depth-3" style="overflow-y: auto;
+    height: 456px;
+    border-radius: 34px;" data-aos="fade-up" data-aos-duration="1000">
+                        <table class="responsive-table centered highlight" style=" border-radius: 23px;">
+                            <thead>
+                                <tr>
+                                    <th>Plane ID</th>
+                                    <th>Owner name</th>
+                                    <th>Plane Type</th>
+                                    <th>Plane Capacity</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>Alvin</td>
+                                    <td>Eclair</td>
+                                    <td>$0.87</td>
+                                    <td>$0.87</td>
+                                    <td><button class="btn waves-effect waves-light z-depth-5" type="submit" name="action" style="border-radius: 23px;   background-color: #00838f"  data-aos="fade-right" data-aos-duration="1000">EDIT
+                                            <i class="material-icons right">edit</i>
+                                        </button> &nbsp; <button class="btn waves-effect waves-light z-depth-5" type="submit" name="action" style="border-radius: 23px;   background-color: #B71C1C"  data-aos="fade-left" data-aos-duration="1000">DELETE
+                                            <i class="material-icons right">delete</i>
+                                        </button></td>
+                                </tr>
+                                <tr>
+                                    <td>Alan</td>
+                                    <td>Jellybean</td>
+                                    <td>$3.76</td>
+                                    <td>$3.76</td>
+                                    <td><button class="btn waves-effect waves-light z-depth-5" type="submit" name="action" style="border-radius: 23px;   background-color: #00838f" data-aos="fade-right" data-aos-duration="1000">EDIT
+                                            <i class="material-icons right">edit</i>
+                                        </button> &nbsp; <button class="btn waves-effect waves-light z-depth-5" type="submit" name="action" style="border-radius: 23px;   background-color: #B71C1C" data-aos="fade-left" data-aos-duration="1000">DELETE
+                                            <i class="material-icons right">delete</i>
+                                        </button></td>
+                                </tr>
+                                <tr>
+                                    <td>Jonathan</td>
+                                    <td>Lollipop</td>
+                                    <td>$7.00</td>
+                                    <td>$7.00</td>
+                                    <td><button class="btn waves-effect waves-light z-depth-5" type="submit" name="action" style="border-radius: 23px;   background-color: #00838f" data-aos="fade-right" data-aos-duration="1000">EDIT
+                                            <i class="material-icons right">edit</i>
+                                        </button> &nbsp; <button class="btn waves-effect waves-light z-depth-5" type="submit" name="action" style="border-radius: 23px;   background-color: #B71C1C" data-aos="fade-left" data-aos-duration="1000">DELETE
+                                            <i class="material-icons right">delete</i>
+                                        </button></td>
+                                </tr>
+
+                                <tr>
+                                    <td>Alvin</td>
+                                    <td>Eclair</td>
+                                    <td>$0.87</td>
+                                    <td>$0.87</td>
+                                    <td><button class="btn waves-effect waves-light z-depth-5" type="submit" name="action" style="border-radius: 23px;   background-color: #00838f" data-aos="fade-right" data-aos-duration="1000">EDIT
+                                            <i class="material-icons right">edit</i>
+                                        </button> &nbsp; <button class="btn waves-effect waves-light z-depth-5" type="submit" name="action" style="border-radius: 23px;   background-color: #B71C1C" data-aos="fade-left" data-aos-duration="1000">DELETE
+                                            <i class="material-icons right">delete</i>
+                                        </button></td>
+                                </tr>
+                                <tr>
+                                    <td>Alan</td>
+                                    <td>Jellybean</td>
+                                    <td>$3.76</td>
+                                    <td>$3.76</td>
+                                    <td><button class="btn waves-effect waves-light z-depth-5" type="submit" name="action" style="border-radius: 23px;   background-color: #00838f" data-aos="fade-right" data-aos-duration="1000">EDIT
+                                            <i class="material-icons right">edit</i>
+                                        </button> &nbsp; <button class="btn waves-effect waves-light z-depth-5" type="submit" name="action" style="border-radius: 23px;   background-color: #B71C1C" data-aos="fade-left" data-aos-duration="1000">DELETE
+                                            <i class="material-icons right">delete</i>
+                                        </button></td>
+                                </tr>
+                                <tr>
+                                    <td>Jonathan</td>
+                                    <td>Lollipop</td>
+                                    <td>$7.00</td>
+                                    <td>$7.00</td>
+                                    <td><button class="btn waves-effect waves-light z-depth-5" type="submit" name="action" style="border-radius: 23px;   background-color: #00838f" data-aos="fade-right" data-aos-duration="1000">EDIT
+                                            <i class="material-icons right">edit</i>
+                                        </button> &nbsp; <button class="btn waves-effect waves-light z-depth-5" type="submit" name="action" style="border-radius: 23px;   background-color: #B71C1C" data-aos="fade-left" data-aos-duration="1000">DELETE
+                                            <i class="material-icons right">delete</i>
+                                        </button></td>
+                                </tr>
+
+
+                                <tr>
+                                    <td>Alvin</td>
+                                    <td>Eclair</td>
+                                    <td>$0.87</td>
+                                    <td>$0.87</td>
+                                    <td><button class="btn waves-effect waves-light z-depth-5" type="submit" name="action" style="border-radius: 23px;   background-color: #00838f" data-aos="fade-right" data-aos-duration="1000">EDIT
+                                            <i class="material-icons right">edit</i>
+                                        </button> &nbsp; <button class="btn waves-effect waves-light z-depth-5" type="submit" name="action" style="border-radius: 23px;   background-color: #B71C1C" data-aos="fade-left" data-aos-duration="1000">DELETE
+                                            <i class="material-icons right">delete</i>
+                                        </button></td>
+                                </tr>
+                                <tr>
+                                    <td>Alan</td>
+                                    <td>Jellybean</td>
+                                    <td>$3.76</td>
+                                    <td>$3.76</td>
+                                    <td><button class="btn waves-effect waves-light z-depth-5" type="submit" name="action" style="border-radius: 23px;   background-color: #00838f" data-aos="fade-right" data-aos-duration="1000">EDIT
+                                            <i class="material-icons right">edit</i>
+                                        </button> &nbsp; <button class="btn waves-effect waves-light z-depth-5" type="submit" name="action" style="border-radius: 23px;   background-color: #B71C1C" data-aos="fade-left" data-aos-duration="1000">DELETE
+                                            <i class="material-icons right">delete</i>
+                                        </button></td>
+                                </tr>
+                                <tr>
+                                    <td>Jonathan</td>
+                                    <td>Lollipop</td>
+                                    <td>$7.00</td>
+                                    <td>$7.00</td>
+                                    <td><button class="btn waves-effect waves-light z-depth-5" type="submit" name="action" style="border-radius: 23px;   background-color: #00838f" data-aos="fade-right" data-aos-duration="1000">EDIT
+                                            <i class="material-icons right">edit</i>
+                                        </button> &nbsp; <button class="btn waves-effect waves-light z-depth-5" type="submit" name="action" style="border-radius: 23px;   background-color: #B71C1C" data-aos="fade-left" data-aos-duration="1000">DELETE
+                                            <i class="material-icons right">delete</i>
+                                        </button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+
+                    </div>
+
+
+
+                </div>
+
+            </div>
+            <div id="test-swipe-2" class="col s12 ">
+                <div class="row">
+                    <div class="input-field col s4 m4">
+                        <select class="icons">
+                            <option value="" disabled selected>Choose your option</option>
+                            <option value="" data-icon="download1.jpg">example 1</option>
+                            <option value="" data-icon="download2.jpg">example 2</option>
+                            <option value="" data-icon="download3.jpg">example 3</option>
+                        </select>
+                        <label>SORTY BY</label>
+                    </div>
+                    <div class="input-field col s4 m4">
+
+                        <i class="material-icons prefix">search</i>
+                        <input id="icon_prefix" type="text">
+                        <label for="icon_prefix">Search</label>
+
+
+
+                    </div>
+
+                    <div class="col s4 m4" style="text-align: center;margin-top: 23px;">
+                        <button class="btn waves-effect waves-light z-depth-5" type="submit" name="action" style="border-radius: 23px;   background-color: #311b92">ADD PILOTS
+                            <i class="material-icons right">send</i>
+                        </button>
+                        <!--                            &nbsp;&nbsp;<a href="#" class="btn" style="border-radius: 23px;    background: linear-gradient(to right, rgb(21, 153, 87), rgb(21, 87, 153));" >Cancel</a>-->
+
+                    </div>
+
+                </div>
+
+
+                <div class="row">
+                    <div class="col s12 m12">
+                        <table class="responsive-table centered highlight z-depth-3" style=" border-radius: 23px;">
+                            <thead>
+                                <tr>
+                                    <th>Pilot ID</th>
+                                    <th>License number</th>
+                                    <th>City</th>
+                                    <th>State</th>
+                                    <th>SSN</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>Alvin</td>
+                                    <td>Eclair</td>
+                                    <td>$0.87</td>
+                                    <td>$0.87</td>
+                                    <td>$0.87</td>
+                                    <td><button class="btn waves-effect waves-light z-depth-5" type="submit" name="action" style="border-radius: 23px;   background-color: #00838f" data-aos="fade-left" data-aos-duration="1000">EDIT
+                                            <i class="material-icons right">edit</i>
+                                        </button> &nbsp; <button class="btn waves-effect waves-light z-depth-5" type="submit" name="action" style="border-radius: 23px;   background-color: #B71C1C" data-aos="fade-right" data-aos-duration="1000">DELETE
+                                            <i class="material-icons right">delete</i>
+                                        </button></td>
+                                </tr>
+                                <tr>
+                                    <td>Alan</td>
+                                    <td>Jellybean</td>
+                                    <td>$3.76</td>
+                                    <td>$3.76</td>
+                                    <td>$3.76</td>
+                                    <td><button class="btn waves-effect waves-light z-depth-5" type="submit" name="action" style="border-radius: 23px;   background-color: #00838f"  data-aos="fade-left" data-aos-duration="1000">EDIT
+                                            <i class="material-icons right">edit</i>
+                                        </button> &nbsp; <button class="btn waves-effect waves-light z-depth-5" type="submit" name="action" style="border-radius: 23px;   background-color: #B71C1C" data-aos="fade-right" data-aos-duration="1000">DELETE
+                                            <i class="material-icons right">delete</i>
+                                        </button></td>
+                                </tr>
+                                <tr>
+                                    <td>Jonathan</td>
+                                    <td>Lollipop</td>
+                                    <td>$7.00</td>
+                                    <td>$7.00</td>
+                                    <td>$7.00</td>
+                                    <td><button class="btn waves-effect waves-light z-depth-5" type="submit" name="action" style="border-radius: 23px;   background-color: #00838f"  data-aos="fade-left" data-aos-duration="1000">EDIT
+                                            <i class="material-icons right">edit</i>
+                                        </button> &nbsp; <button class="btn waves-effect waves-light z-depth-5" type="submit" name="action" style="border-radius: 23px;   background-color: #B71C1C" data-aos="fade-right" data-aos-duration="1000">DELETE
+                                            <i class="material-icons right">delete</i>
+                                        </button></td>
+                                </tr>
+
+                                <tr>
+                                    <td>Alvin</td>
+                                    <td>Eclair</td>
+                                    <td>$0.87</td>
+                                    <td>$0.87</td>
+                                    <td>$0.87</td>
+                                    <td><button class="btn waves-effect waves-light z-depth-5" type="submit" name="action" style="border-radius: 23px;   background-color: #00838f"  data-aos="fade-left" data-aos-duration="1000">EDIT
+                                            <i class="material-icons right">edit</i>
+                                        </button> &nbsp; <button class="btn waves-effect waves-light z-depth-5" type="submit" name="action" style="border-radius: 23px;   background-color: #B71C1C" data-aos="fade-right" data-aos-duration="1000">DELETE
+                                            <i class="material-icons right">delete</i>
+                                        </button></td>
+                                </tr>
+                                <tr>
+                                    <td>Alan</td>
+                                    <td>Jellybean</td>
+                                    <td>$3.76</td>
+                                    <td>$3.76</td>
+                                    <td>$3.76</td>
+                                    <td><button class="btn waves-effect waves-light z-depth-5" type="submit" name="action" style="border-radius: 23px;   background-color: #00838f"  data-aos="fade-left" data-aos-duration="1000">EDIT
+                                            <i class="material-icons right">edit</i>
+                                        </button> &nbsp; <button class="btn waves-effect waves-light z-depth-5" type="submit" name="action" style="border-radius: 23px;   background-color: #B71C1C" data-aos="fade-right" data-aos-duration="1000">DELETE
+                                            <i class="material-icons right">delete</i>
+                                        </button></td>
+                                </tr>
+                                <tr>
+                                    <td>Jonathan</td>
+                                    <td>Lollipop</td>
+                                    <td>$7.00</td>
+                                    <td>$7.00</td>
+                                    <td>$7.00</td>
+                                    <td><button class="btn waves-effect waves-light z-depth-5" type="submit" name="action" style="border-radius: 23px;   background-color: #00838f"  data-aos="fade-left" data-aos-duration="1000">EDIT
+                                            <i class="material-icons right">edit</i>
+                                        </button> &nbsp; <button class="btn waves-effect waves-light z-depth-5" type="submit" name="action" style="border-radius: 23px;   background-color: #B71C1C" data-aos="fade-right" data-aos-duration="1000">DELETE
+                                            <i class="material-icons right">delete</i>
+                                        </button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+
+                    </div>
+
+
+
+                </div>
+            </div>
+            <div id="test-swipe-3" class="col s12">
+
+                <div class="row">
+                    <div class="input-field col s4 m4">
+                        <select class="icons">
+                            <option value="" disabled selected>Choose your option</option>
+                            <option value="" data-icon="download1.jpg">example 1</option>
+                            <option value="" data-icon="download2.jpg">example 2</option>
+                            <option value="" data-icon="download3.jpg">example 3</option>
+                        </select>
+                        <label>SORTY BY</label>
+                    </div>
+                    <div class="input-field col s4 m4">
+
+                        <i class="material-icons prefix">search</i>
+                        <input id="icon_prefix" type="text">
+                        <label for="icon_prefix">Search</label>
+
+
+
+                    </div>
+
+                    <div class="col s4 m4" style="text-align: center;margin-top: 23px;">
+                        <button class="btn waves-effect waves-light z-depth-5" type="submit" name="action" style="border-radius: 23px;   background-color: #311b92">ADD HANGAR
+                            <i class="material-icons right">send</i>
+                        </button>
+                        <!--                            &nbsp;&nbsp;<a href="#" class="btn" style="border-radius: 23px;    background: linear-gradient(to right, rgb(21, 153, 87), rgb(21, 87, 153));" >Cancel</a>-->
+
+                    </div>
+
+                </div>
+
+
+                <div class="row">
+                    <div class="col s12 m12">
+                        <table class="responsive-table centered highlight z-depth-3" style=" border-radius: 23px;">
+                            <thead>
+                                <tr>
+                                    <th>Hanger ID</th>
+                                    <th>Manager</th>
+                                    <th>City</th>
+                                    <th>State</th>
+                                    <th>Zipcode</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>Alvin</td>
+                                    <td>Eclair</td>
+                                    <td>$0.87</td>
+                                    <td>$0.87</td>
+                                    <td>$0.87</td>
+                                    <td><button class="btn waves-effect waves-light z-depth-5" type="submit" name="action" style="border-radius: 23px;   background-color: #00838f"  data-aos="fade-left" data-aos-duration="1000">EDIT
+                                            <i class="material-icons right">edit</i>
+                                        </button> &nbsp; <button class="btn waves-effect waves-light z-depth-5" type="submit" name="action" style="border-radius: 23px;   background-color: #B71C1C" data-aos="fade-right" data-aos-duration="1000">DELETE
+                                            <i class="material-icons right">delete</i>
+                                        </button></td>
+                                </tr>
+                                <tr>
+                                    <td>Alan</td>
+                                    <td>Jellybean</td>
+                                    <td>$3.76</td>
+                                    <td>$3.76</td>
+                                    <td>$3.76</td>
+                                    <td><button class="btn waves-effect waves-light z-depth-5" type="submit" name="action" style="border-radius: 23px;   background-color: #00838f"  data-aos="fade-left" data-aos-duration="1000">EDIT
+                                            <i class="material-icons right">edit</i>
+                                        </button> &nbsp; <button class="btn waves-effect waves-light z-depth-5" type="submit" name="action" style="border-radius: 23px;   background-color: #B71C1C" data-aos="fade-right" data-aos-duration="1000">DELETE
+                                            <i class="material-icons right">delete</i>
+                                        </button></td>
+                                </tr>
+                                <tr>
+                                    <td>Jonathan</td>
+                                    <td>Lollipop</td>
+                                    <td>$7.00</td>
+                                    <td>$7.00</td>
+                                    <td>$7.00</td>
+                                    <td><button class="btn waves-effect waves-light z-depth-5" type="submit" name="action" style="border-radius: 23px;   background-color: #00838f"  data-aos="fade-left" data-aos-duration="1000">EDIT
+                                            <i class="material-icons right">edit</i>
+                                        </button> &nbsp; <button class="btn waves-effect waves-light z-depth-5" type="submit" name="action" style="border-radius: 23px;   background-color: #B71C1C" data-aos="fade-right" data-aos-duration="1000">DELETE
+                                            <i class="material-icons right">delete</i>
+                                        </button></td>
+                                </tr>
+
+                                <tr>
+                                    <td>Alvin</td>
+                                    <td>Eclair</td>
+                                    <td>$0.87</td>
+                                    <td>$0.87</td>
+                                    <td>$0.87</td>
+                                    <td><button class="btn waves-effect waves-light z-depth-5" type="submit" name="action" style="border-radius: 23px;   background-color: #00838f"  data-aos="fade-left" data-aos-duration="1000">EDIT
+                                            <i class="material-icons right">edit</i>
+                                        </button> &nbsp; <button class="btn waves-effect waves-light z-depth-5" type="submit" name="action" style="border-radius: 23px;   background-color: #B71C1C" data-aos="fade-right" data-aos-duration="1000">DELETE
+                                            <i class="material-icons right">delete</i>
+                                        </button></td>
+                                </tr>
+                                <tr>
+                                    <td>Alan</td>
+                                    <td>Jellybean</td>
+                                    <td>$3.76</td>
+                                    <td>$3.76</td>
+                                    <td>$3.76</td>
+                                    <td><button class="btn waves-effect waves-light z-depth-5" type="submit" name="action" style="border-radius: 23px;   background-color: #00838f"  data-aos="fade-left" data-aos-duration="1000">EDIT
+                                            <i class="material-icons right">edit</i>
+                                        </button> &nbsp; <button class="btn waves-effect waves-light z-depth-5" type="submit" name="action" style="border-radius: 23px;   background-color: #B71C1C" data-aos="fade-right" data-aos-duration="1000">DELETE
+                                            <i class="material-icons right">delete</i>
+                                        </button></td>
+                                </tr>
+                                <tr>
+                                    <td>Jonathan</td>
+                                    <td>Lollipop</td>
+                                    <td>$7.00</td>
+                                    <td>$7.00</td>
+                                    <td>$7.00</td>
+                                    <td><button class="btn waves-effect waves-light z-depth-5" type="submit" name="action" style="border-radius: 23px;   background-color: #00838f"  data-aos="fade-left" data-aos-duration="1000">EDIT
+                                            <i class="material-icons right">edit</i>
+                                        </button> &nbsp; <button class="btn waves-effect waves-light z-depth-5" type="submit" name="action" style="border-radius: 23px;   background-color: #B71C1C" data-aos="fade-right" data-aos-duration="1000">DELETE
+                                            <i class="material-icons right">delete</i>
+                                        </button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+
+                    </div>
+
+
+
+                </div>
+            </div>
+
+
+
+        </main>
+    </div>
+    <!--JavaScript at end of body for optimized loading-->
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.sidenav').sidenav();
+        });
+
+        $(document).ready(function() {
+            $('.tabs').tabs();
+        });
+
+        $(document).ready(function() {
+            $('select').formSelect();
+        });
+    </script>
+     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>
